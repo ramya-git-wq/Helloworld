@@ -28,5 +28,12 @@ pipeline {
                 }
             }
         }
+        stage ('sample Stage') {
+            steps {
+                withMaven(maven : 'Maven_home') {
+                    sh 'aws --version'
+                }
+            }
+        }
     }
 }
